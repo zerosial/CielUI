@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel ./index.html",
+    "prebuild": "npx rimraf build",
+    "build": "parcel build --public-url ./ ./index.html --experimental-scope-hoisting --out-dir build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
