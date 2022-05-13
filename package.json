@@ -1,7 +1,7 @@
 {
   "name": "cielui",
   "version": "1.0.0",
-  "description": "",
+  "description": "npm install",
   "main": "index.js",
   "scripts": {
     "dev": "parcel ./index.html",
@@ -13,5 +13,14 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerosial/CielUI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zerosial/CielUI/issues"
+  },
+  "homepage": "https://github.com/zerosial/CielUI#readme"
 }
