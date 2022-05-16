@@ -59,6 +59,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
+          <div class="btn-group dropend d-grid gap-2 col-10 mx-auto">
+            <button type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" ata-bs-auto-close="true" aria-expanded="false">
+              로그인
+            </button>
+            <div class="dropdown-menu">
+              <form class="px-4 py-3">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-success" id="Sign-in">Sign in</button>
+              </form>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">회원 가입</a>
+            </div>
+          </div>
           <li class="nav-item">
             <a
               class="nav-link js-scroll-trigger"
@@ -72,7 +92,7 @@
               class="nav-link js-scroll-trigger"
               href="#experienceComputer"
               style="font-family: 'Nanum Pen Script', cursive"
-              >경험 (컴퓨터)</a
+              >경험 (프로그래밍)</a
             >
           </li>
           <li class="nav-item">
@@ -153,7 +173,7 @@
       <section class="resume-section" id="experienceComputer">
         <div class="resume-section-content">
           <h2 class="mb-5" style="font-family: 'Nanum Pen Script', cursive">
-            경 험 (컴퓨터)
+            경 험 (프로그래밍)
           </h2>
           <div
             class="d-flex flex-column flex-md-row justify-content-between mb-5"
@@ -273,7 +293,7 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Core theme JS-->
     <script src="src/index.js"></script>
   </body>

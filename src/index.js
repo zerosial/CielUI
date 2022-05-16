@@ -1,5 +1,3 @@
-import * as bootstrap from "bootstrap";
-
 window.addEventListener("DOMContentLoaded", (event) => {
   // Activate Bootstrap scrollspy on the main nav element
   const sideNav = document.body.querySelector("#sideNav");
@@ -23,3 +21,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 });
+
+// Login api
+const button = document.getElementById("Sign-in");
+
+function onLogin() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const emailValidTest =
+    /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+  if (emailValidTest.test(email)) {
+    alert("성공");
+    return true;
+  } else {
+    alert("실패");
+    return false;
+  }
+  console.log(email);
+  console.log(password);
+}
+
+button.addEventListener("click", onLogin);
