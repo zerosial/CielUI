@@ -60,25 +60,26 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           <div class="btn-group dropend d-grid gap-2 col-10 mx-auto">
+            <br>
             <button type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" ata-bs-auto-close="true" aria-expanded="false">
               로그인
             </button>
             <div class="dropdown-menu">
-              <form class="px-4 py-3">
+              <form class="px-4 py-3" id="loginForm">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="email" placeholder="email@example.com">
                 </div>
+                <!-- Password 제작중
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
                   <input type="password" class="form-control" id="password" placeholder="Password">
-                </div>
+                </div>-->
                 <button type="submit" class="btn btn-success" id="Sign-in">Sign in</button>
               </form>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">회원 가입</a>
             </div>
           </div>
+          <br><br>
           <li class="nav-item">
             <a
               class="nav-link js-scroll-trigger"
@@ -119,6 +120,18 @@
               >프로젝트</a
             >
           </li>
+          <br><br><br>
+          <div class="social-icons">
+            <a class="social-icon" href="https://zerosial.tistory.com/"
+              ><i class="fa-solid fa-blog"></i
+            ></a>
+            <a class="social-icon" href="https://github.com/zerosial"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a class="social-icon" href="https://open.kakao.com/o/sUAObVfe"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
+          </div>
         </ul>
       </div>
     </nav>
@@ -155,17 +168,6 @@
             </li>
           </ul>
         </div>
-          <div class="social-icons">
-            <a class="social-icon" href="https://zerosial.tistory.com/"
-              ><i class="fa-solid fa-blog"></i
-            ></a>
-            <a class="social-icon" href="https://github.com/zerosial"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a class="social-icon" href="https://open.kakao.com/o/sUAObVfe"
-              ><i class="fa-brands fa-facebook-messenger"></i
-            ></a>
-          </div>
         </div>
       </section>
       <hr class="m-0" />
@@ -285,8 +287,68 @@
       <section class="resume-section" id="project">
         <div class="resume-section-content">
           <h2 class="mb-5" style="font-family: 'Nanum Pen Script', cursive">프로젝트</h2>
-          <ul class="fa-ul mb-0">
-          </ul>
+            <div class="row">
+              <div class="col-sm-6 mb-5">
+                <div class="card" style="width: 30rem;">
+                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="assets/img/project1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <span class="placeholder col-10">
+                            <h5 style='color:rgb(255, 255, 255)'>메인 화면</h5>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="assets/img/img.gif" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <span class="placeholder col-10">
+                              <h5 style='color:rgb(255, 255, 255)'>케로우셀 + 카드</h5>
+                            </span>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="assets/img/img2.gif" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <span class="placeholder col-10">
+                            <h5 style='color:rgb(255, 255, 255)'>임시</h5>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">포트폴리오</h5>
+                    <p class="card-text">HTML + CSS + JS<br>홈페이지 템플릿 : Bootstrap<br>패키지 및 모듈화 : Parcel</p>
+                    <a href="https://zerosial.github.io/CielUI/" class="btn btn-primary" style="color:rgb(255, 255, 255);">방문하기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 mb-5">
+                <div class="card" style="width: 30rem;">
+                  <img src="assets/img/project1.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">포트폴리오</h5>
+                    <p class="card-text">HTML + CSS + JS<br>홈페이지 템플릿 : Bootstrap<br>패키지 및 모듈화 : Parcel</p>
+                    <a href="https://zerosial.github.io/CielUI/" class="btn btn-primary" style="color:rgb(255, 255, 255);">방문하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </section>
     </div>

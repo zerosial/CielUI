@@ -23,22 +23,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // Login api
-const button = document.getElementById("Sign-in");
+const loginForm = document.querySelector("#loginForm");
 
-function onLogin() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const emailValidTest =
+function onLogin(event) {
+  const userEmail = document.getElementById("email").value;
+  const userPassword = document.getElementById("password").value;
+  const emailValidValue =
     /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
-  if (emailValidTest.test(email)) {
-    alert("성공");
-    return true;
-  } else {
-    alert("실패");
+
+  event.preventDefault();
+  console.log(event);
+
+  if (!emailValidValue.test(userEmail)) {
+    alert("올바른 이메일 주소를 입력해주세요");
     return false;
   }
-  console.log(email);
-  console.log(password);
 }
 
-button.addEventListener("click", onLogin);
+loginForm.addEventListener("submit", onLogin);
+
+//date.toLocaleTimeString('ko-KR') -> 시계

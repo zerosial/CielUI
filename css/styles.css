@@ -3138,8 +3138,8 @@ fieldset:disabled .btn {
 
 .btn-primary {
   color: #000;
-  background-color: #bd5d38;
-  border-color: #bd5d38;
+  background-color: #1f4493;
+  border-color: #202792;
 }
 .btn-primary:hover {
   color: #000;
@@ -6333,6 +6333,13 @@ fieldset:disabled .btn {
 
 .carousel {
   position: relative;
+}
+
+.carousel img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .carousel.pointer-event {
