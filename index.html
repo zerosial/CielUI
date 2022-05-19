@@ -59,13 +59,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <div class="btn-group dropend d-grid gap-2 col-10 mx-auto">
+          <div class="btn-group dropend d-grid gap-2 col-10">
             <br>
-            <button type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" ata-bs-auto-close="true" aria-expanded="false">
+            <button type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" ata-bs-auto-close="true" id="loginButton">
               로그인
             </button>
             <div class="dropdown-menu">
-              <form class="px-4 py-3" id="loginForm">
+              <form class="px-4 py-3" id="loginForm" novalidate>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="email" placeholder="email@example.com">
@@ -79,7 +79,10 @@
               </form>
             </div>
           </div>
-          <br><br>
+          <br>
+          <h4 class="mb-0" style="color :rgb(255, 255, 255)" id="userName">
+          </h4>
+          <br>
           <li class="nav-item">
             <a
               class="nav-link js-scroll-trigger"
@@ -117,7 +120,15 @@
               class="nav-link js-scroll-trigger"
               href="#project"
               style="font-family: 'Nanum Pen Script', cursive"
-              >프로젝트</a
+              >프로젝트 (개인)</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link js-scroll-trigger"
+              href="#projectteam"
+              style="font-family: 'Nanum Pen Script', cursive"
+              >프로젝트 (팀)</a
             >
           </li>
           <br><br><br>
@@ -137,9 +148,25 @@
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
+      <!-- Side bar-->
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+      </div>
       <!-- About-->
       <section class="resume-section" id="about">
         <div class="resume-section-content">
+          <div class="social-icons float-end">
+            <a class="social-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="sideBar">
+              <i id="toggle" class="fa-solid fa-toggle-off"></i>
+            </a>
+            </div>
+            <br>
           <h1 class="mb-0" style="font-family: 'Nanum Pen Script', cursive">
             백
             <span class="text-primary">승훈</span>
@@ -167,7 +194,6 @@
               모든 일의 흐름을 파악하고 진행하는 걸 좋아합니다.
             </li>
           </ul>
-        </div>
         </div>
       </section>
       <hr class="m-0" />
@@ -283,13 +309,13 @@
         </div>
       </section>
       <hr class="m-0" />
-      <!-- project-->
+      <!-- project solo-->
       <section class="resume-section" id="project">
         <div class="resume-section-content">
-          <h2 class="mb-5" style="font-family: 'Nanum Pen Script', cursive">프로젝트</h2>
+          <h2 class="mb-5" style="font-family: 'Nanum Pen Script', cursive">프로젝트 (개인)</h2>
             <div class="row">
-              <div class="col-sm-6 mb-5">
-                <div class="card" style="width: 30rem;">
+              <div class="col-sm-4 mb-5">
+                <div class="card" style="width: 22rem;">
                   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -338,9 +364,99 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 mb-5">
-                <div class="card" style="width: 30rem;">
-                  <img src="assets/img/project1.png" class="card-img-top" alt="...">
+              <div class="col-sm-4 mb-5">
+                <div class="card" style="width: 22rem;">
+                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="assets/img/project1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <span class="placeholder col-10">
+                            <h5 style='color:rgb(255, 255, 255)'>메인 화면</h5>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="assets/img/img.gif" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <span class="placeholder col-10">
+                              <h5 style='color:rgb(255, 255, 255)'>케로우셀 + 카드</h5>
+                            </span>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="assets/img/img2.gif" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <span class="placeholder col-10">
+                            <h5 style='color:rgb(255, 255, 255)'>임시</h5>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">포트폴리오</h5>
+                    <p class="card-text">HTML + CSS + JS<br>홈페이지 템플릿 : Bootstrap<br>패키지 및 모듈화 : Parcel</p>
+                    <a href="https://zerosial.github.io/CielUI/" class="btn btn-primary" style="color:rgb(255, 255, 255);">방문하기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 mb-5">
+                <div class="card" style="width: 22rem;">
+                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="assets/img/project1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <span class="placeholder col-10">
+                            <h5 style='color:rgb(255, 255, 255)'>메인 화면</h5>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="assets/img/img.gif" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <span class="placeholder col-10">
+                              <h5 style='color:rgb(255, 255, 255)'>케로우셀 + 카드</h5>
+                            </span>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="assets/img/img2.gif" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <span class="placeholder col-10">
+                            <h5 style='color:rgb(255, 255, 255)'>임시</h5>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                   <div class="card-body">
                     <h5 class="card-title">포트폴리오</h5>
                     <p class="card-text">HTML + CSS + JS<br>홈페이지 템플릿 : Bootstrap<br>패키지 및 모듈화 : Parcel</p>
@@ -351,6 +467,164 @@
             </div>
         </div>
       </section>
+            <!-- projectteam-->
+            <section class="resume-section" id="projectteam">
+              <div class="resume-section-content">
+                <h2 class="mb-5" style="font-family: 'Nanum Pen Script', cursive">프로젝트 (팀)</h2>
+                  <div class="row">
+                    <div class="col-sm-4 mb-5">
+                      <div class="card" style="width: 22rem;">
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item" data-bs-interval="5000">
+                              <img src="assets/img/project1.png" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <span class="placeholder col-10">
+                                  <h5 style='color:rgb(255, 255, 255)'>메인 화면</h5>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="carousel-item active" data-bs-interval="5000">
+                              <img src="assets/img/img.gif" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <span class="placeholder col-10">
+                                    <h5 style='color:rgb(255, 255, 255)'>케로우셀 + 카드</h5>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                              <img src="assets/img/img2.gif" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <span class="placeholder col-10">
+                                  <h5 style='color:rgb(255, 255, 255)'>임시</h5>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">포트폴리오</h5>
+                          <p class="card-text">HTML + CSS + JS<br>홈페이지 템플릿 : Bootstrap<br>패키지 및 모듈화 : Parcel</p>
+                          <a href="https://zerosial.github.io/CielUI/" class="btn btn-primary" style="color:rgb(255, 255, 255);">방문하기</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 mb-5">
+                      <div class="card" style="width: 22rem;">
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item" data-bs-interval="5000">
+                              <img src="assets/img/project1.png" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <span class="placeholder col-10">
+                                  <h5 style='color:rgb(255, 255, 255)'>메인 화면</h5>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="carousel-item active" data-bs-interval="5000">
+                              <img src="assets/img/img.gif" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <span class="placeholder col-10">
+                                    <h5 style='color:rgb(255, 255, 255)'>케로우셀 + 카드</h5>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                              <img src="assets/img/img2.gif" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <span class="placeholder col-10">
+                                  <h5 style='color:rgb(255, 255, 255)'>임시</h5>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">포트폴리오</h5>
+                          <p class="card-text">HTML + CSS + JS<br>홈페이지 템플릿 : Bootstrap<br>패키지 및 모듈화 : Parcel</p>
+                          <a href="https://zerosial.github.io/CielUI/" class="btn btn-primary" style="color:rgb(255, 255, 255);">방문하기</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 mb-5">
+                      <div class="card" style="width: 22rem;">
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item" data-bs-interval="5000">
+                              <img src="assets/img/project1.png" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <span class="placeholder col-10">
+                                  <h5 style='color:rgb(255, 255, 255)'>메인 화면</h5>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="carousel-item active" data-bs-interval="5000">
+                              <img src="assets/img/img.gif" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <span class="placeholder col-10">
+                                    <h5 style='color:rgb(255, 255, 255)'>케로우셀 + 카드</h5>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                              <img src="assets/img/img2.gif" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <span class="placeholder col-10">
+                                  <h5 style='color:rgb(255, 255, 255)'>임시</h5>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">포트폴리오</h5>
+                          <p class="card-text">HTML + CSS + JS<br>홈페이지 템플릿 : Bootstrap<br>패키지 및 모듈화 : Parcel</p>
+                          <a href="https://zerosial.github.io/CielUI/" class="btn btn-primary" style="color:rgb(255, 255, 255);">방문하기</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </section>
     </div>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>

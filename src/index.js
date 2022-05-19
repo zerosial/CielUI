@@ -24,22 +24,54 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 // Login api
 const loginForm = document.querySelector("#loginForm");
+const loginButton = document.querySelector("#loginButton");
+const userName = document.querySelector("#userName");
 
-function onLogin(event) {
+if (!localStorage.getItem("userEmail")) {
+  loginButton.outerHTML =
+    '<button type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" ata-bs-auto-close="true" id="loginButton">로그인</button>';
+  loginForm.addEventListener("submit", onLogin);
+}
+
+if (localStorage.getItem("userEmail")) {
+  loginButton.outerHTML =
+    '<button type="button" class="btn btn-light btn-lg" id="logoutButton">로그 아웃</button>';
+  const logoutButton = document.querySelector("#logoutButton");
+
+  userName.innerHTML = `${localStorage.getItem(
+    "userEmail"
+  )}님 <br> 안녕하십니까`;
+  logoutButton.addEventListener("click", onlogOut);
+}
+
+function onLogin() {
   const userEmail = document.getElementById("email").value;
-  const userPassword = document.getElementById("password").value;
   const emailValidValue =
     /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
-
-  event.preventDefault();
-  console.log(event);
 
   if (!emailValidValue.test(userEmail)) {
     alert("올바른 이메일 주소를 입력해주세요");
     return false;
   }
+
+  localStorage.setItem("userEmail", userEmail);
 }
 
-loginForm.addEventListener("submit", onLogin);
+function onlogOut() {
+  localStorage.removeItem("userEmail");
+  location.reload();
+}
+
+// SideBar
+const sideBar = document.querySelector("#sideBar");
+const toggle = document.querySelector("#toggle");
+let isSideBar = false;
+
+sideBar.addEventListener("click", onClickSideBar);
+
+function onClickSideBar() {
+  isSideBar = true;
+  //somethig do...
+}
 
 //date.toLocaleTimeString('ko-KR') -> 시계
