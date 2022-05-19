@@ -72,6 +72,5 @@ sideBar.addEventListener("click", onClickSideBar);
 function onClickSideBar() {
   isSideBar = true;
   //somethig do...
+  //date.toLocaleTimeString('ko-KR') -> 시계
 }
-
-//date.toLocaleTimeString('ko-KR') -> 시계
