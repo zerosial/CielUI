@@ -30,7 +30,6 @@ const userName = document.querySelector("#userName");
 if (!localStorage.getItem("userEmail")) {
   loginButton.outerHTML =
     '<button type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" ata-bs-auto-close="true" id="loginButton">로그인</button>';
-  loginForm.addEventListener("submit", onLogin);
 }
 
 if (localStorage.getItem("userEmail")) {
@@ -56,6 +55,8 @@ function onLogin() {
 
   localStorage.setItem("userEmail", userEmail);
 }
+
+loginForm.addEventListener("submit", onLogin);
 
 function onlogOut() {
   localStorage.removeItem("userEmail");
