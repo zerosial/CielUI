@@ -666,6 +666,15 @@ progress {
   height: auto;
 }
 
+.img-myset {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 340px;
+  max-height: 340px;
+}
+
 .figure {
   display: inline-block;
 }

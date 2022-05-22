@@ -1,5 +1,7 @@
 ## 📰 Portfolio
 
+https://zerosial.github.io/CielUI/
+
 ## Setup (사전 설치)
 
 npm install
@@ -17,10 +19,8 @@ Visit http://localhost:1234 from your browser (Chrome)
 - [x] 로그인 시 아이디 기억 (local storage) + 표시변경 완성
 - [x] 하단 프로젝트 캐로셀 + 카드형 배치완료
 - [x] 1차 폰 , PC 상 CSS 조정
-- [ ] 날짜 , 시간 , 명언 등 실시간 정보 탭 우측 사이드 바에 추가
+- [x] 날씨 , 시간, 랜덤 이미지 우측 사이드 바에 추가
 - [ ] TODO LIST 추가
-
-
 
 ## 사용 기술 (npm)
 

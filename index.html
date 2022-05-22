@@ -150,25 +150,40 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <p>오늘의 날씨</p>
-        </div>
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">시간</h5>
-        </div>
-        <div class="offcanvas-body">
-          <p>현재 시간</p>
-        </div>
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">명언</h5>
-        </div>
-        <div class="offcanvas-body">
-          <p>오늘의 명언</p>
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <div>
+                <div class="card p-2">
+                  <div class="d-flex">
+                    <h3 class="flex-grow-1" id="location"></h3>
+                    <h3 id="clock"></h3>
+                  </div>
+                  <div class="d-flex flex-column temp mt-2 mb-3">
+                    <h1 class="mb-0 font-weight-bold" id="temperature"></h1>
+                    <span class="grey" id="whether"></span>
+                  </div>
+                  <div class="d-flex">
+                    <div class="temp-details flex-grow-1">
+                      <p class="my-1">
+                        <img src="https://i.imgur.com/B9kqOzp.png" height="17px" />
+                        <span id="wind"></span>
+                      </p>
+                      <p class="my-1">
+                        <i class="fa fa-tint mr-2" aria-hidden="true"></i>
+                        <span id="humidity"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">오늘의 그림</h5>
         </div>
         <div class="offcanvas-body">
-          <p>오늘의 그림</p>
+          <img src="https://images.unsplash.com/photo-1652336967223-5eb146dabed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MzIzODQwNQ&ixlib=rb-1.2.1&q=80&w=1080" class="img-myset" id="image">
         </div>
       </div>
       <!-- About-->
