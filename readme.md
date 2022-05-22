@@ -19,8 +19,9 @@ Visit http://localhost:1234 from your browser (Chrome)
 - [x] 로그인 시 아이디 기억 (local storage) + 표시변경 완성
 - [x] 하단 프로젝트 캐로셀 + 카드형 배치완료
 - [x] 1차 폰 , PC 상 CSS 조정
-- [x] 날씨 , 시간, 랜덤 이미지 우측 사이드 바에 추가
-- [ ] TODO LIST 추가
+- [x] 날씨 , 시간, 랜덤 이미지 추가 (우측하단)
+- [x] TODO LIST 추가 (우측하단)
+- [ ] CSS 조정 예정
 
 ## 사용 기술 (npm)
 

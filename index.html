@@ -126,7 +126,7 @@
               >프로젝트 (팀)</a
             >
           </li>
-          <br><br><br>
+          <br>
           <div class="social-icons">
             <a class="social-icon" href="https://zerosial.tistory.com/"
               ><i class="fa-solid fa-blog"></i
@@ -186,12 +186,30 @@
           <img src="https://images.unsplash.com/photo-1652336967223-5eb146dabed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MzIzODQwNQ&ixlib=rb-1.2.1&q=80&w=1080" class="img-myset" id="image">
         </div>
       </div>
+      <!-- TodoList-->
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="todolist" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">todolist</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="header">
+            <h2>To Do List</h2>
+              <input type="text" id="myInput" placeholder="내용...">
+              <button id="addButton">Add</button>
+          </div>
+          <ul id="todoList"></ul>
+        </div>
+      </div>
       <!-- About-->
       <section class="resume-section" id="about">
         <div class="resume-section-content">
           <a class="iconFloat" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="sideBar">
-            <i class="fa fa-plus my-float"></i>
+            <i class="fa-solid fa-clock my-float"></i>
             </a>
+            <a class="iconFloatTodo" data-bs-toggle="offcanvas" data-bs-target="#todolist" aria-controls="offcanvasScrolling" id="sideBar">
+              <i class="fa-solid fa-clipboard-check my-float"></i>
+              </a>
             <br>
           <h1 class="mb-0" style="font-family: 'Nanum Pen Script', cursive">
             백

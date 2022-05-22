@@ -63,19 +63,6 @@ function onlogOut() {
   location.reload();
 }
 
-// SideBar
-const sideBar = document.querySelector("#sideBar");
-const toggle = document.querySelector("#toggle");
-let isSideBar = false;
-
-sideBar.addEventListener("click", onClickSideBar);
-
-function onClickSideBar() {
-  isSideBar = true;
-  //somethig do...
-  //date.toLocaleTimeString('ko-KR') -> 시계
-}
-
 // Clock & Whether
 window.onload = function () {
   setClock();
@@ -128,3 +115,65 @@ fetch(pictureUrl).then((response) => {
 
   imageEl.src = image;
 });
+
+// Todo List
+const addButton = document.querySelector("#addButton");
+const toDos = [];
+
+addButton.addEventListener("click", createTodoList);
+makeCloseButton();
+
+function makeCloseButton() {
+  const myNodelist = document.querySelector("#todoList").querySelectorAll("LI");
+
+  for (let i = 0; i < myNodelist.length; i++) {
+    const isSpan = document.querySelectorAll("#close")[i];
+    const span = document.createElement("SPAN");
+    const txt = document.createTextNode("\u00D7");
+    if (!isSpan) {
+      span.id = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    const closeButton = document.querySelectorAll("#close");
+    const parsedToDos = JSON.parse(localStorage.getItem("todos"));
+
+    closeButton[i].onclick = function () {
+      parsedToDos.splice(i, 1);
+      toDos.splice(i, 1);
+      localStorage.setItem("todos", JSON.stringify(parsedToDos));
+      const Nodelist = document.querySelector("#todoList");
+      Nodelist.innerHTML = "";
+      drawTodoList(Nodelist);
+      makeCloseButton();
+    };
+  }
+}
+
+function createTodoList() {
+  const inputValue = document.querySelector("#myInput").value;
+  const myNodelist = document.querySelector("#todoList");
+  myNodelist.innerHTML = "";
+
+  if (inputValue === "") {
+    alert("값을 넣어주세요");
+  } else {
+    toDos.push(inputValue);
+    localStorage.setItem("todos", JSON.stringify(toDos));
+    drawTodoList(myNodelist);
+    makeCloseButton();
+  }
+}
+
+function drawTodoList(myNodelist) {
+  const parsedToDos = JSON.parse(localStorage.getItem("todos"));
+  console.log(parsedToDos);
+  for (let i = 0; i < parsedToDos.length; i++) {
+    const createLi = document.createElement("li");
+    createLi.innerHTML = `${parsedToDos[i]}`;
+    myNodelist.append(createLi);
+  }
+}
+
+makeCloseButton();
