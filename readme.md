@@ -21,7 +21,7 @@ Visit http://localhost:1234 from your browser (Chrome)
 - [x] 1차 폰 , PC 상 CSS 조정
 - [x] 날씨 , 시간, 랜덤 이미지 추가 (우측하단)
 - [x] TODO LIST 추가 (우측하단)
-- [ ] CSS 조정 예정
+- [ ] React.js 리팩토링 예정
 
 ## 사용 기술 (npm)
 
