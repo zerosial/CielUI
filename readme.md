@@ -1,17 +1,24 @@
-## 📰 Portfolio
+# 📰 Portfolio
 
-https://zerosial.github.io/CielUI/
+## Using
 
-## Setup (사전 설치)
+1. Bootstrap (프론트엔드 프레임워크)
+   웹 디자인과 CSS와 함께 연동하여 페이지를 디자인하고 애니메이션을 추가한다.
 
-npm install
+2. Parcel (모듈 번들러 , 오류 테스팅)
+   실시간으로 화면을 조작하며 오류를 잡아내고 사이트를 패키징한다.
 
-## Development (작업 방법)
+3. HTML
+4. CSS3
+5. JavaScript
 
-npm run dev
-Visit http://localhost:1234 from your browser (Chrome)
+## Introduce
 
-## TODO
+포트폴리오 제작을 위한 Html 첫번째 프로젝트 입니다.
+
+https://zerosial.github.io/NomadClone-ReactMovie/
+
+## Refactoring
 
 - [x] 베이스가 되는 Html 사이트 및 구조 변경
 - [x] 기본적인 틀의 사이트를 만든다
@@ -21,16 +28,3 @@ Visit http://localhost:1234 from your browser (Chrome)
 - [x] 1차 폰 , PC 상 CSS 조정
 - [x] 날씨 , 시간, 랜덤 이미지 추가 (우측하단)
 - [x] TODO LIST 추가 (우측하단)
-- [ ] React.js 리팩토링 예정
-
-## 사용 기술 (npm)
-
-- Bootstrap (프론트엔드 프레임워크)
-  웹 디자인과 CSS와 함께 연동하여 페이지를 디자인하고 애니메이션을 추가한다.
-
-- Parcel (모듈 번들러 , 오류 테스팅)
-  실시간으로 화면을 조작하며 오류를 잡아내고 사이트를 패키징한다.
-
-- HTML
-- CSS3
-- JavaScript
