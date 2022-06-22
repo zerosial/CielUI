@@ -16,7 +16,7 @@
 
 포트폴리오 제작을 위한 Html 첫번째 프로젝트 입니다.
 
-https://zerosial.github.io/NomadClone-ReactMovie/
+https://zerosial.github.io/CielUI/
 
 ## Refactoring
 
